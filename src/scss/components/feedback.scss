@@ -1,0 +1,24 @@
+@mixin alert($red, $green, $blue) {
+    background-color: rgba($red,$green,$blue,0.5);
+    border: 1px solid rgba($red,$green,$blue,1);
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.c-feedback {
+    &.warning {
+        @include alert(255,165,80);
+    }
+
+    &.error {
+        @include alert(255,0,80);
+    }
+
+    &.success {
+        @include alert(0, 255, 157);
+    }
+}
+
+
+

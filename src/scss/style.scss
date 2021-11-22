@@ -1,0 +1,32 @@
+//Colors
+@import "./settings/colors.scss";
+
+//Fonts
+@import "./settings/fontsizes.scss";
+
+//Navigation
+@import "./components/nav.scss";
+
+//Body
+@import "./components/body.scss";
+
+//Feedback
+@import "./components/feedback.scss";
+
+//kan bv ook
+//$border: 1px solid green;
+
+//extend
+/*%banner {
+    background-color: red;
+    color: black;
+    padding: 20px;
+}
+
+#banner1 {
+    @extend banner;
+}
+
+#banner2 {
+    @extend banner;
+}*/
