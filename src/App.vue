@@ -1,66 +1,39 @@
 <template>
+ <div id="app"> 
+  <!-- Home Pagina -->
+  <Homepage v-if="page== 'home'" @change-page="goToPage"/>
 
-    <div id="app">
+  <!-- Game -->
+  <Gamepage v-if="page== 'game'" @change-page="goToPage"/>
 
-        <Navigation />
-
-        <h1>EuroSong Festival</h1>
-
-        <Counter />
-
-        <Feedback v-for="(message, index) in messages" v-bind:key="index"
-          v-bind:message=message.message
-          v-bind:classtype=message.classtype>
-        </Feedback>
-
-        <button @click="addMessage">
-          Add Message
-        </button>
-
-    </div>
+  <!-- Ranking -->
+  <!-- DOEN WIJ ALS TAAK VAN DIE MAN RIP ACHJA LUKT WEL ZEKERS -->
+  <Rankingpage v-if="page== 'ranking'" @change-page="goToPage"/>
+ </div>
 
 </template>
 
 <script>
-//import of the whole styling
-import style from "./scss/style.scss";
-
-//Components
-import Navigation from "./components/Navigation.vue"
-import Counter from "./components/Counter.vue"
-import Feedback from "./components/Feedback.vue"
+//Pages
+import Homepage from "./pages/Homepage.vue"
+import Gamepage from "./pages/Gamepage.vue"
+import Rankingpage from "./pages/Rankingpage.vue"
 
 export default {
   name: 'App',
   components: {
-    Navigation,
-    Counter,
-    Feedback
+    Homepage,
+    Gamepage,
+    Rankingpage
   },
   data() {
     return {
-      messages: [
-        {
-          message: "Het is kapot",
-          classtype: "c-feedback error"
-        },
-        {
-          message: "Probleempje",
-          classtype: "c-feedback warning"
-        },
-        {
-          message: "Het is gelukt",
-          classtype: "c-feedback success"
-        }
-      ]
+      page: "game"
     }
   },
   methods: {
-    addMessage() {
-      this.messages.push( {
-        message:"NieuwItem",
-        classtype:"c-feedback success"
-      })
+    goToPage(page) {
+      this.page = page
     }
   }
 }
