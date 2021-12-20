@@ -13,6 +13,17 @@
 //Feedback
 @import "./components/feedback.scss";
 
+#header {
+    position: relative;
+    margin: 0;
+    padding-top: 0px;
+    background-color: $primary-blue;
+  }
+
+body{
+  margin:0px;
+}
+
 //kan bv ook
 //$border: 1px solid green;
 

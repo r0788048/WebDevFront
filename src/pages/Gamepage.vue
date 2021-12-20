@@ -1,7 +1,6 @@
 <template>
   <div >
-    <button @click="goToPage('home')"> Show Home </button>
-    <button @click="goToPage('ranking')"> Show Ranking </button>
+    <Navigation @change-page="goToPage" />
     <h1> Game Page </h1>
     <Carousel :items="songs" :activeIndex="activeSongIndex" @change-index="changeActiveSongIndex"/>
 
@@ -18,11 +17,13 @@
 <script>
 
   import Carousel from "../components/Carousel.vue"
+  import Navigation from "../components/Navigation.vue"
 
   export default {
       name: "Gamepage",
       components: {
-        Carousel
+        Carousel,
+        Navigation
       },
       data() {
         return {

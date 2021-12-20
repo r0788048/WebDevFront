@@ -8,7 +8,7 @@
 
             <li class="c-nav-list-item" v-for="(link, index) in links" v-bind:key="index">
 
-                <a v-bind:href="link.linkUrl">
+                <a @click="goToPage(link.linkUrl)">
 
                     {{ link.linkText }}
 
@@ -35,17 +35,22 @@
                 links: [
                     {
                         linkText: "Home",
-                        linkUrl: "/home"
+                        linkUrl: "home"
                     },
                     {
-                        linkText: "Contact",
-                        linkUrl: "/contact"
+                        linkText: "Game",
+                        linkUrl: "game"
                     },
                     {
-                        linkText: "Shop",
-                        linkUrl: "/shop"
+                        linkText: "Ranking",
+                        linkUrl: "ranking"
                     }
                 ]
+            }
+        },
+        methods: {
+            goToPage(url) {
+                this.$emit("change-page", url)
             }
         }
     }

@@ -28,7 +28,7 @@ export default {
   },
   data() {
     return {
-      page: "game"
+      page: "home"
     }
   },
   methods: {
@@ -38,3 +38,7 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  @import "./scss/style.scss";
+</style>
