@@ -1,7 +1,7 @@
 <template>
   <div >
     <Navigation @change-page="goToPage" />
-    <h1> Ranking Page </h1>
+    <h1 class="ranking-title"> Ranking Page </h1>
     <Display :items="songs"/>
 
   </div>
@@ -25,9 +25,9 @@ export default {
     mounted() {
         console.log('mounted');
         this.fetchSongs();
-        while(true) {
+        //while(true) {
                 //this.weenRuben();
-        }
+        //}
       },
     methods: {
         goToPage(page) {
@@ -113,7 +113,7 @@ export default {
                 },
                 body: JSON.stringify({
                     songID: 16,
-                    ip: "sexoffendergaanneer",
+                    ip: "sexoffendergaatneer",
                     points: 9219411
                 })
               })
