@@ -1,7 +1,7 @@
-<template>
- <div id="app"> 
+<template style="margin:0px">
+ <div id="app" class="app" style="margin:0px"> 
   <!-- Home Pagina -->
-  <Homepage v-if="page== 'home'" @change-page="goToPage"/>
+  <Homepage v-if="page== 'home'" @change-page="goToPage" style="margin:0px" />
 
   <!-- Game -->
   <Gamepage v-if="page== 'game'" @change-page="goToPage"/>
@@ -41,4 +41,11 @@ export default {
 
 <style lang="scss">
   @import "./scss/style.scss";
+
+  @font-face {
+  font-family: "Gotham-Bold";
+  src: local("Gotham-Bold"),
+   url(./fonts/Gotham-Bold.otf) format("truetype");
+  }
+
 </style>

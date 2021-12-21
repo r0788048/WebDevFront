@@ -13,6 +13,9 @@
 //Feedback
 @import "./components/feedback.scss";
 
+//Pages
+@import "./pages/homepage.scss";
+
 #header {
     position: relative;
     margin: 0;
@@ -21,6 +24,26 @@
   }
 
 body{
+  margin:0px;
+}
+
+nav {
+  margin:0px;
+}
+
+div {
+  margin:0px;
+}
+
+template {
+  margin: 0px;
+}
+
+html {
+  margin:0px;
+}
+
+ul {
   margin:0px;
 }
 

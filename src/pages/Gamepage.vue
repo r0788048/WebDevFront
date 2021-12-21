@@ -1,6 +1,6 @@
-<template>
-  <div >
-    <Navigation @change-page="goToPage" />
+<template style="margin:0px">
+  <div style="margin:0px">
+    <Navigation @change-page="goToPage" style="margin:0px" />
     <h1> Game Page </h1>
     <Carousel :items="songs" :activeIndex="activeSongIndex" @change-index="changeActiveSongIndex"/>
 
@@ -123,6 +123,7 @@
               .then((data) => {
                 console.log(data);
               });
+              
           },
 
           //Logic methods

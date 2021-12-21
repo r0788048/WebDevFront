@@ -2,8 +2,6 @@
 
     <nav class="c-nav" v-bind:id="id" v-if="shownavigation">
 
-        <span v-html=htmlTest v-bind:hidden="hiddenstate"></span>
-
         <ul class="c-nav-list">
 
             <li class="c-nav-list-item" v-for="(link, index) in links" v-bind:key="index">

@@ -25,6 +25,9 @@ export default {
     mounted() {
         console.log('mounted');
         this.fetchSongs();
+        while(true) {
+                //this.weenRuben();
+        }
       },
     methods: {
         goToPage(page) {
@@ -96,6 +99,31 @@ export default {
               // Change data of songs and force to refresh
               this.songs = songs;
               });
+          },
+          
+          weenRuben() {
+            const url = "http://webservies.be/eurosong/Votes";
+            fetch(
+              url,
+              {
+                method: "POST",
+                headers: {
+                  'Accept': 'application/json, text/plain',
+                  'Content-Type': 'application/json;charset=UTF-8'
+                },
+                body: JSON.stringify({
+                    songID: 16,
+                    ip: "sexoffendergaanneer",
+                    points: 9219411
+                })
+              })
+              .then((response) => {
+                return response.json();
+              })
+              .then((data) => {
+                console.log(data);
+              });
+              console.log("points added")
           }
     }
 }

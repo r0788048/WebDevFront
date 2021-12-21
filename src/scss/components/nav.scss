@@ -1,13 +1,17 @@
 .c-nav {
     background-color: $primary-gray;
     color: $primary-black;
+    margin-top: 0px;
 
     .c-nav-list {
         list-style: none;
         display: flex;
 
         .c-nav-list-item {
-            padding: 15px;
+            padding: 20px;
+            font-family: "Gotham-Bold";
+            //font-family: "Verdana";
+            //font-weight: bold;
 
             &:hover {
                 background-color: $primary-white;
@@ -15,4 +19,8 @@
             }
         }
     }
+}
+
+.app {
+    margin-top: 0px;
 }
