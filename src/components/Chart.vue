@@ -1,8 +1,5 @@
 <template>
     <div>
-        <div  v-for="(song, index) in items" :key="song.id">
-            <div v-if="index < 0"></div>
-        </div>
         <GChart class="chart" type="ColumnChart" :options="options" :data="data" />  
     </div>
 </template>

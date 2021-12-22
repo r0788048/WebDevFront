@@ -21,7 +21,7 @@
 
                  <li class="c-nav-list-item">
                     <a @click="alertUser()">
-                        Search
+                        <img src="../images/search.png" class="search-logo" /> Search
                     </a>
                 </li>
                 <li class="c-nav-list-item">
@@ -32,6 +32,7 @@
 
             </ul>
         </div>
+        <div class="reset-float"></div>
     </nav>
 
 </template>

@@ -1,15 +1,24 @@
 <template style="margin:0px">
   <div style="margin:0px">
     <Navigation @change-page="goToPage" style="margin:0px" />
-    <h1 class="logo-text"> Game Page </h1>
+    <h1 class="ranking-title"> Game Page </h1>
+    <h1 class="gamepage-subtext">Listen to every song and divide your points. Be careful: you can only give each amount of points once!</h1>
+
     <Carousel :items="songs" :activeIndex="activeSongIndex" @change-index="changeActiveSongIndex"/>
 
-    <div v-for="(votebutton, index) in votes" :key="index">
-      <button  @click="vote(votebutton.points)" v-if="!votebutton.isVoted">
-        Add {{ votebutton.points }} points
-      </button>
-      
-    </div>
+    <nav class="p-nav">
+      <ul class="p-nav-list">
+        <li class="p-nav-list-item"  v-for="(votebutton, index) in votes" :key="index">
+          <a class="points-button" @click="vote(votebutton.points)" v-if="!votebutton.isVoted">
+            Add {{ votebutton.points }} points
+          </a>
+          <a class="points-button-disabled" @click="alertUser()" v-else>
+            Add {{ votebutton.points }} points
+          </a>
+        </li>
+      </ul>
+    </nav>
+
     <Footer />
   
   </div>
@@ -34,11 +43,11 @@
           activeSongIndex: 0,
           votes: [
              {
-               points: 1,
+               points: 2,
                isVoted: false
              },
              {
-               points: 2,
+               points: 3,
                isVoted: false
              },
              {
@@ -46,7 +55,31 @@
                isVoted: false
              },
              {
+               points: 5,
+               isVoted: false
+             },
+             {
+               points: 6,
+               isVoted: false
+             },
+             {
+               points: 7,
+               isVoted: false
+             },
+             {
                points: 8,
+               isVoted: false
+             },
+             {
+               points: 9,
+               isVoted: false
+             },
+             {
+               points: 10,
+               isVoted: false
+             },
+             {
+               points: 12,
                isVoted: false
              }
           ]
@@ -156,6 +189,9 @@
             }
             console.log(activeVotes);
           },
+          alertUser() {
+            alert('Je hebt dit aantal punten al gegeven!');
+          }
 
       }
   }

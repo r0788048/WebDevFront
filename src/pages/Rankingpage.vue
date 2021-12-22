@@ -4,7 +4,7 @@
     <Navigation @change-page="goToPage" />
     <h1 class="ranking-title"> Ranking </h1>
     <Display :items="sorteerSongs(songs)"/>
-    <Chart :items="sorteerSongs(songs)"/>
+    <!-- <Chart :items="sorteerSongs(songs)"/> -->
     <Footer/>
 
   </div>

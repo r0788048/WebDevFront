@@ -1,0 +1,89 @@
+.p-nav {
+    background-color: $primary-gray;
+    color: $primary-black;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    width: 80%;
+    margin-left: 10%;
+    
+
+    .p-nav-list {
+        list-style: none;
+        display: flex;
+
+        .p-nav-list-item {
+            padding: 22px;
+            font-family: "Gotham-Bold";
+            text-align: center;
+            //font-family: "Verdana";
+            //font-weight: bold;
+
+            &:hover {
+                background-color: $primary-white;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.prev-song {
+    float: left;
+    margin-left: 10%;
+    width: 10%;
+    height: 410px;
+    &:hover {
+        background-color: $secundary-blue;
+        cursor: pointer;
+    }
+}
+  
+.next-song {
+    float: left;
+    width: 10%;
+    height: 410px;
+    &:hover {
+        background-color: $secundary-blue;
+        cursor: pointer;
+    }
+}
+
+.song-middle {
+    float: left;
+    width: 60%;
+}
+
+.game-frame {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+}
+
+.game-text {
+    text-align: center;
+    font-family: "Gotham-Bold";
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.gamepage-subtext {
+    margin-top: 30px;
+    text-align: center;
+    font-family: "Gotham-Bold";
+    font-size: 20px;
+}
+
+.points-button-disabled {
+    color: #ccc;
+
+    &:hover {
+        background-color: #ccc;
+        cursor: pointer;
+    }
+}
+
+.points-button {
+    cursor: pointer;
+}
