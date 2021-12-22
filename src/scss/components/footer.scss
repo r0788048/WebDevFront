@@ -1,0 +1,36 @@
+.footer {
+    margin-top: 50px;
+}
+
+.c-ft {
+    color: $primary-black;
+    margin-top: 0px;
+
+    .c-ft-list {
+        list-style: none;
+        display: flex;
+
+        .c-ft-list-item {
+            padding: 20px;
+            font-family: "Gotham-Bold";
+            //font-family: "Verdana";
+            //font-weight: bold;
+
+        }
+    }
+}
+
+.ft-href {
+    text-decoration: none;
+    color: white;
+}
+
+.ft-href:hover {
+    text-decoration: underline;
+}
+
+.ft-text {
+    margin-left: 4%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}

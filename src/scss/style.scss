@@ -1,52 +1,16 @@
-//Colors
+//Settings
 @import "./settings/colors.scss";
-
-//Fonts
 @import "./settings/fontsizes.scss";
 
-//Navigation
+//Components
 @import "./components/nav.scss";
-
-//Body
+@import "./components/footer.scss";
 @import "./components/body.scss";
-
-//Feedback
 @import "./components/feedback.scss";
 
 //Pages
 @import "./pages/homepage.scss";
 @import "./pages/rankingpage.scss";
-
-#header {
-    position: relative;
-    margin: 0;
-    padding-top: 0px;
-    background-color: $primary-blue;
-  }
-
-body{
-  margin:0px;
-}
-
-nav {
-  margin:0px;
-}
-
-div {
-  margin:0px;
-}
-
-template {
-  margin: 0px;
-}
-
-html {
-  margin:0px;
-}
-
-ul {
-  margin:0px;
-}
 
 //kan bv ook
 //$border: 1px solid green;

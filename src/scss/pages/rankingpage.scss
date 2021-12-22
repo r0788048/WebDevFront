@@ -7,18 +7,54 @@
     width: 80%;
 }
 
+.ranking-div {
+    display: flex;
+}
+
 .ranking-text {
+    float: left;
     margin-left: 10%;
     font-family: "Gotham-Bold";
     font-weight: bold;
     font-size: 20px;
 }
 
+.podium-text {
+    float: left;
+    margin-left: 10%;
+    font-family: "Gotham-Bold";
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.ranking-points {
+    margin-right: 10%;
+    font-family: "Gotham-Bold";
+    font-weight: bold;
+    float: right;
+    font-size: 20px;
+}
+
+.podium-points {
+    margin-right: 10%;
+    font-family: "Gotham-Bold";
+    font-weight: bold;
+    float: right;
+    font-size: 30px;
+}
+
 .ranking-title {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     text-align: center;
     font-family: "Gotham-Bold";
     font-weight: bold;
-    font-size: 40px;
+    font-size: 60px;
+}
+
+.chart {
+    display: block;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 100px;
 }

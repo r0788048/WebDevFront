@@ -10,6 +10,7 @@
       </button>
       
     </div>
+    <Footer />
   
   </div>
 </template>
@@ -17,12 +18,14 @@
 <script>
 
   import Carousel from "../components/Carousel.vue"
+  import Footer from "../components/Footer.vue"
   import Navigation from "../components/Navigation.vue"
 
   export default {
       name: "Gamepage",
       components: {
         Carousel,
+        Footer,
         Navigation
       },
       data() {

@@ -1,21 +1,37 @@
 <template>
 
     <nav class="c-nav" v-bind:id="id" v-if="shownavigation">
+        <div class="nav-left">
+            <ul class="c-nav-list">
 
-        <ul class="c-nav-list">
+                <li class="c-nav-list-item" v-for="(link, index) in links" v-bind:key="index">
 
-            <li class="c-nav-list-item" v-for="(link, index) in links" v-bind:key="index">
+                    <a @click="goToPage(link.linkUrl)">
 
-                <a @click="goToPage(link.linkUrl)">
+                        {{ link.linkText }}
 
-                    {{ link.linkText }}
+                    </a>
 
-                </a>
+                </li>
 
-            </li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <ul class="c-nav-list">
 
-        </ul>
+                 <li class="c-nav-list-item">
+                    <a @click="alertUser()">
+                        Search
+                    </a>
+                </li>
+                <li class="c-nav-list-item">
+                    <a @click="alertUser()">
+                        Login
+                    </a>
+                </li>
 
+            </ul>
+        </div>
     </nav>
 
 </template>
@@ -27,7 +43,6 @@
             return {
                 shownavigation: true,
                 brandName: "Eurosong Festival",
-                htmlTest: "<h1>Test H1</h1>",
                 id: "main-navigation",
                 hiddenstate:true,
                 links: [
@@ -49,6 +64,9 @@
         methods: {
             goToPage(url) {
                 this.$emit("change-page", url)
+            },
+            alertUser() {
+                alert('Deze pagina bestaat niet!');
             }
         }
     }
