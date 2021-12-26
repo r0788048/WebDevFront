@@ -1,6 +1,5 @@
 <template style="margin:0px">
   <div style="margin:0px">
-    <Navigation @change-page="goToPage" style="margin:0px" />
     <h1 class="ranking-title"> Game Page </h1>
     <h1 class="gamepage-subtext">Listen to every song and divide your points. Be careful: you can only give each amount of points once!</h1>
 
@@ -19,7 +18,7 @@
       </ul>
     </nav>
 
-    <Footer />
+    
   
   </div>
 </template>
@@ -27,15 +26,11 @@
 <script>
 
   import Carousel from "../components/Carousel.vue"
-  import Footer from "../components/Footer.vue"
-  import Navigation from "../components/Navigation.vue"
 
   export default {
       name: "Gamepage",
       components: {
-        Carousel,
-        Footer,
-        Navigation
+        Carousel
       },
       data() {
         return {

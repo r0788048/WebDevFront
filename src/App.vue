@@ -1,5 +1,8 @@
 <template style="margin:0px">
  <div id="app" class="app" style="margin:0px"> 
+   <!-- Navigation -->
+  <Navigation @change-page="goToPage" style="margin:0px" />
+
   <!-- Home Pagina -->
   <Homepage v-if="page== 'home'" @change-page="goToPage" style="margin:0px" />
 
@@ -7,8 +10,10 @@
   <Gamepage v-if="page== 'game'" @change-page="goToPage"/>
 
   <!-- Ranking -->
-  <!-- DOEN WIJ ALS TAAK VAN DIE MAN RIP ACHJA LUKT WEL ZEKERS -->
   <Rankingpage v-if="page== 'ranking'" @change-page="goToPage"/>
+
+  <!-- Footer -->
+  <Footer />
  </div>
 
 </template>
@@ -18,13 +23,17 @@
 import Homepage from "./pages/Homepage.vue"
 import Gamepage from "./pages/Gamepage.vue"
 import Rankingpage from "./pages/Rankingpage.vue"
+import Navigation from "./components/Navigation.vue"
+import Footer from "./components/Footer.vue"
 
 export default {
   name: 'App',
   components: {
     Homepage,
     Gamepage,
-    Rankingpage
+    Rankingpage,
+    Navigation,
+    Footer
   },
   data() {
     return {

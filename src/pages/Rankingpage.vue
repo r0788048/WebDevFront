@@ -1,25 +1,19 @@
 <template>
   <div >
 
-    <Navigation @change-page="goToPage" />
     <h1 class="ranking-title"> Ranking </h1>
     <Display :items="sorteerSongs(songs)"/>
-    <Footer/>
 
   </div>
 </template>
 
 <script>
 import Display from "../components/Display.vue"
-import Navigation from "../components/Navigation.vue"
-import Footer from "../components/Footer.vue"
 
 export default {
     name: "Gamepage",
     components: {
-      Display,
-      Navigation,
-      Footer
+      Display
     },
     data() {
       return {
