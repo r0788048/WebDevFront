@@ -4,7 +4,6 @@
     <Navigation @change-page="goToPage" />
     <h1 class="ranking-title"> Ranking </h1>
     <Display :items="sorteerSongs(songs)"/>
-    <!-- <Chart :items="sorteerSongs(songs)"/> -->
     <Footer/>
 
   </div>
@@ -12,7 +11,6 @@
 
 <script>
 import Display from "../components/Display.vue"
-import Chart from "../components/Chart.vue"
 import Navigation from "../components/Navigation.vue"
 import Footer from "../components/Footer.vue"
 
@@ -21,7 +19,6 @@ export default {
     components: {
       Display,
       Navigation,
-      Chart,
       Footer
     },
     data() {
@@ -31,9 +28,6 @@ export default {
     },
     mounted() {
         this.fetchSongs();
-        //while(true) {
-                //this.weenRuben();
-        //}
       },
     methods: {
         goToPage(page) {
@@ -104,27 +98,6 @@ export default {
             // Change data of songs and force to refresh
             this.songs = songs;
             });
-        },
-        
-        weenRuben() {
-          const url = "http://webservies.be/eurosong/Votes";
-          fetch(
-            url,
-            {
-              method: "POST",
-              headers: {
-                'Accept': 'application/json, text/plain',
-                'Content-Type': 'application/json;charset=UTF-8'
-              },
-              body: JSON.stringify({
-                  songID: 16,
-                  ip: "sexoffendergaatneer",
-                  points: 9219411
-              })
-            })
-            .then((response) => {
-              return response.json();
-            })
         },
 
         sorteerSongs(songs) {

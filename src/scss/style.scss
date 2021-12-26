@@ -8,25 +8,7 @@
 @import "./components/body.scss";
 @import "./components/feedback.scss";
 
-//Pages
+//Page
 @import "./pages/homepage.scss";
 @import "./pages/rankingpage.scss";
 @import "./pages/gamepage.scss";
-
-//kan bv ook
-//$border: 1px solid green;
-
-//extend
-/*%banner {
-    background-color: red;
-    color: black;
-    padding: 20px;
-}
-
-#banner1 {
-    @extend banner;
-}
-
-#banner2 {
-    @extend banner;
-}*/
